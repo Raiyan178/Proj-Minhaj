@@ -1,0 +1,33 @@
+@media only screen and (max-width: 990px) {
+    .navsearchnmore{
+        margin-left: 10rem;
+    }
+    .navul{
+        display: flex;
+    }
+    .noimg{
+        display: flex;
+    }
+    
+}
+@media only screen and (min-width: 990px) {
+    .lol{
+        margin-left: 40rem;
+    }
+    .navh{
+        margin-left: 5rem;
+    }
+    .navsearchnmore{
+        margin-right: 5rem;
+    }
+    .imgh{
+        margin-left: 35rem;
+    }
+    .lolol{
+        margin-left: 15rem;
+    }
+   
+}
+@media only screen and (max-width: 800px) {
+   
+}

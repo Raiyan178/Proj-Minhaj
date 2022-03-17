@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Font Awesome -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+      <!-- MDB -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+      <link rel="stylesheet" href="{% static 'css/main.css' %}">
+      <link rel="stylesheet" href="{% static 'css/respo.css' %}">
+    <title>You</title>
+</head>
+<body>
+    {% include 'nav.html' %}
+
+
+    <section class="vh-100" style="">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col col-lg-6 mb-4 mb-lg-0">
+            <div class="card mb-3" style="border-radius: .5rem;">
+              <div class="row g-0">
+                <div class="col-md-4 gradient-custom text-center text-white" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                  <img
+                    src="{{profileobj.profilePic.url}}"
+                    alt="Avatar"
+                    class="img-fluid my-5"
+                    style="width: 80px;"
+                  />
+                  <h5 class='text-dark'>{{request.user.first_name}} {{request.user.last_name}}</h5>
+                  <p class='text-dark'>@{{request.user.username}}</p>
+                  <i class="far fa-edit mb-5"></i>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body p-4">
+                    <h6>Information</h6>
+                    <hr class="mt-0 mb-4">
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Email</h6>
+                        <p class="text-muted">{{request.user.email}}</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Phone</h6>
+                        <p class="text-muted">+{{profileobj.phone}}</p>
+                      </div>
+                    </div>
+                    <h6>Projects</h6>
+                    <hr class="mt-0 mb-4">
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Address</h6>
+                        <p class="text-muted">{{profileobj.address}}</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Your Order</h6>
+                        <p class="text-muted">{{ordercount}}</p>
+                      </div>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+
+</body>
+</html>

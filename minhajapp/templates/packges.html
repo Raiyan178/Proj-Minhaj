@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/respo.css' %}">
+    
+
+
+    <title>Packages</title>
+</head>
+
+<body>
+
+    {% comment %} nav {% endcomment %}
+
+    {% include 'nav.html' %}
+
+    {% comment %} nav {% endcomment %}
+
+    <!-- main  -->
+    {% if messages %}
+    {% for o in messages %}
+    <div class="snacks">
+        <div role="alert" class="fade alert alert-info show">{{o}}</div>
+      </div>
+      {% endfor %}
+    {% endif %}
+    <section class="container-fluid my-4">
+
+        <div class="row mx-3">
+            {% for i in packages %}
+
+            <div class="col-md-3 col-lg-3 my-4 mx-3" >
+           
+                <div class="card">
+                    <img src="{{i.thmbnail.url}}" class="card-img-top" alt="Fissure in Sandstone"/>
+                    <div class="card-body">
+                      <h5 class="card-title">{{i.title}}</h5>
+                      <p class="card-text">{{i.disc|slice:":130"}}..</p>
+                      <a href="/packages/{{i.slug}}" class="btn btn-dark">Read More</a>
+                    </div>
+                  </div>
+
+            </div>
+
+
+
+            {% endfor %}
+
+
+            </div>
+
+    </section>
+
+    <!-- main  -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+    
+
+</body>
+
+</html>

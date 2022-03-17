@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/respo.css' %}">
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- nav  -->
+
+   {% include 'nav.html' %}
+
+    <!-- nav  -->
+
+    <!-- MDB -->
+
+    <!-- main  -->
+
+    <main>
+        <section>
+            <div class="container my-5">
+                <div class="bg-image hover-overlay ripple">
+                    <img src="{% static 'image/first.jpg' %}" class="img-fluid hello-img" />
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="container">
+                <h1 class="my-5 imgh">Blogs</h1>
+                <div class="row my-2">
+                    <div class="col-lg-6 my-2 col-md-12">
+                        <img src="{% static 'image/big.jpg' %}" class="img-fluid hello-img" />
+                    </div>
+                    <div class="col-lg-6 my-2 col-md-12 noimg">
+                        <div class="col-lg-6 my-2 col-md-6 col-sm-6 mx-2">
+                            <img src="{% static 'image/sm2.jpg' %}" class="img-fluid hello-img" />
+                        </div>
+                        <div class="col-lg-6 my-2 col-md-6 col-sm-6 mx-2">
+                            <img src="{% static 'image/sm3.jpg' %}" class="img-fluid hello-img" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h3 class="my-5">Choose where'd you wanna go!</h3>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div id="carouselExampleControls" class="carousel slide" data-mdb-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="{% static 'image/dileep-m-rv5ddI1WyCw-unsplash.jpg' %}" class="d-block w-100"
+                                        alt="Wild Landscape" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'image/photo-1595815771614-ade9d652a65d.avif' %}" class="d-block w-100"
+                                        alt="Camera" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'image/photo-1601047095317-25a0ad9933f1.avif' %}" class="d-block w-100"
+                                        alt="Exotic Fruits" />
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-mdb-target="#carouselExampleControls" data-mdb-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-mdb-target="#carouselExampleControls" data-mdb-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 my-2">
+                        <h4>Land of the </h4>
+                        <p>You can choose your next tour project from the manu..One thing we can make sure you that
+                            traveling with is gonna give you a next level experience and a lots of joy...are agency is
+                            famouse for providing the best quality and richful service with lowest price....we bet you
+                            that traveling with us gonna open up the pages of your travel book which were folded till...
+                            So make sure to stay in touch by signing up in here and if you want to have fun of your
+                            servies then book now<br><br>
+                            1.travle with us <br>
+                            2.travle with us <br>
+                            3.travle with us <br>
+                            4.travle with us </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <footer class="text-center bg-dark text-white">
+                <!-- Grid container -->
+                <div class="container p-4">
+                    <!-- Section: Iframe -->
+                    <section class="">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-lg-6">
+                                <div class="ratio ratio-16x9">
+                                    Something about the webpage,packages and the facilities that wasn't write by the builder because of being too much lazy 💤💤
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: Iframe -->
+                </div>
+                <!-- Grid container -->
+
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    this project has been done and held by :
+
+                    <a class="text-white" href="#"> Minhaj akhand shihab and his mates</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+        </section>
+    </main>
+
+    <!-- main  -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+   
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Pacifico&family=Poppins:wght@300;400&family=Roboto:wght@500;700&display=swap");
+:root {
+  --bg-main: #f4ece3;
+  --nav-btn: #f8e7d4;
+  --txt-main: #000;
+  --txt-snd: rgb(26, 26, 26);
+  --popins: "Poppins", sans-serif;
+  --roboto: "Roboto", sans-serif;
+  --cursive-txt: "Pacifico", cursive;
+  --major-mono: "Major Mono Display", monospace;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fafad7;
+}

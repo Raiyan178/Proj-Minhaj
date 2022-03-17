@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/respo.css' %}">
+    <title>Packages</title>
+</head>
+
+<body>
+
+    {% comment %} nav {% endcomment %}
+
+    {% include 'nav.html' %}
+
+    {% comment %} nav {% endcomment %}
+
+    <!-- main  -->
+ 
+    <section class="my-4">
+        <div class="container">
+            <div class="card mb-3" style="width: 100%;">
+                <div class="row g-0">
+
+                  <div class="col-md-7 my-4 mx-3">
+                    <img
+                      src="{{product.thmbnail.url}}"
+                      alt="Trendy Pants and Shoes"
+                      class="img-fluid rounded-start"
+                    />
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="card-body">
+                      <h5 class="card-title">{{product.title}}</h5>
+                      <p class="card-text">
+                        {{product.disc}}
+                      </p>
+                      <p class="card-text">
+                        <strong class="text-muted">Price: {{product.price}} $</strong>
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+                <a class="btn btn-dark" href='/order/{{product.slug}}'>Add cart</a>
+              </div>
+        </div>
+    </section>
+
+    <!-- main  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+
+    <script>
+         
+  
+    </script>
+</body>
+
+</html>
