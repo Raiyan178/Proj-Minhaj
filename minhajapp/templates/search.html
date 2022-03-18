@@ -22,6 +22,7 @@
         <div class="container">
             <center>
                 {% for i in pack %}
+                <a href='/packages/{{i.slug}}' class='text-dark'>
                 <div class="card mb-3 my-5" style="max-width: 740px;">
                     <div class="row g-0">
                       <div class="col-md-4">
@@ -41,6 +42,7 @@
                       </div>
                     </div>
                   </div>
+                </a>
                   {% endfor %}
             </center>
         </div>
